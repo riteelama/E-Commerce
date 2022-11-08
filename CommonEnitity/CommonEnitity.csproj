@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Application\" />
     <Folder Include="Roles\" />
-    <Folder Include="Users\" />
   </ItemGroup>
 
 </Project>
