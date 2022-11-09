@@ -1,21 +1,20 @@
-﻿using CommonEnitity.Catalog;
+﻿using CatalogService.SQLDataProvider;
+using CommonEnitity.Catalog;
 
 namespace CatalogService.BusinessManager;
 
-public class CatalogManager
+public class CatalogManager: ICatalogManager
 {
-    public IEnumerable<CatalogItem> GetCatalogItemList()
+    public async Task<IEnumerable<CatalogItem>> GetCatalogItemListAsyc()
     {
-        List<CatalogItem> objList = new List<CatalogItem>();
-        //We will call SQLData Provider to get the data from MS SQL DB
-        return objList;
+        ICatalogDataProvider objcatalogDataProvider = CatalogFactory.Create();
+        return await objcatalogDataProvider.GetCatalogItemListAsyc();
     }
 
-    public CatalogItem GetCatalogItemByID(Guid itemID)
+    public async Task<CatalogItem> GetCatalogItemByIDAsync(Guid itemID)
     {
-        CatalogItem objItem = new CatalogItem();
-
-        return objItem;
+        ICatalogDataProvider objcatalogDataProvider = CatalogFactory.Create();
+        return await objcatalogDataProvider.GetCatalogItemByIDAsync(itemID);
     }
 }
 

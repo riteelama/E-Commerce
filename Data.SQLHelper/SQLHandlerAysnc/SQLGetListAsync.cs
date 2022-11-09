@@ -49,9 +49,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return mList;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -89,9 +89,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return mList;
                     }
-                    catch (Exception e)
+                    catch 
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -132,9 +132,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return mList;
                     }
-                    catch (Exception e)
+                    catch 
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -172,9 +172,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return mList;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -213,9 +213,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return SQLds;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -251,9 +251,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return SQLds;
                     }
-                    catch (Exception e)
+                    catch 
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {

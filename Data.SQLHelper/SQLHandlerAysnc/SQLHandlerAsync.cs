@@ -16,7 +16,7 @@ namespace SQLHelper
         #region "Private Members"
 
         internal string _objectQualifier = string.Empty;
-        internal string _databaseOwner = "[dbo]";
+        public string _databaseOwner = "[dbo]";
         internal string _connectionString = "";
 
         #endregion
@@ -43,6 +43,11 @@ namespace SQLHelper
         {
             get { return _databaseOwner; }
             set { _databaseOwner = value; }
+        }
+
+        public string GetFullSpName(string spName) 
+        {
+           return $"{databaseOwner}[{spName}]";
         }
 
         public string connectionString

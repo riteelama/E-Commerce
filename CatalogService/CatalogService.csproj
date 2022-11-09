@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Data.SQLHelper\Data.SQLHelper.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SQLDataProvider\" />
-  </ItemGroup>
-
 </Project>

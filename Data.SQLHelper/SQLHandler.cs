@@ -282,9 +282,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return SQLds;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -458,9 +458,9 @@ namespace SQLHelper
                 SQLCmd.ExecuteNonQuery();
                 SQLConn.Close();
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
         }
 
@@ -499,9 +499,9 @@ namespace SQLHelper
 
                 return ReturnValue;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -545,9 +545,9 @@ namespace SQLHelper
                 bool ReturnValue = (bool)SQLCmd.Parameters[OutPutParamerterName].Value;
                 return ReturnValue;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -584,9 +584,9 @@ namespace SQLHelper
                 SQLCmd.ExecuteNonQuery();
 
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -619,9 +619,9 @@ namespace SQLHelper
                 SQLCmd.ExecuteNonQuery();
 
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -645,9 +645,9 @@ namespace SQLHelper
                 SQLConn.Open();
                 SQLCmd.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -688,9 +688,9 @@ namespace SQLHelper
                 SQLCmd.ExecuteNonQuery();
                 return (T)SQLCmd.Parameters[OutPutParamerterName].Value; ;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -731,9 +731,9 @@ namespace SQLHelper
                 SQLCmd.ExecuteNonQuery();
                 return (T)SQLCmd.Parameters[OutPutParamerterName].Value; ;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -887,9 +887,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return ReturnValue;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -929,9 +929,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return ReturnValue;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -973,9 +973,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return ReturnValue;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1007,9 +1007,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return ReturnValue;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1042,9 +1042,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return ReturnValue;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1087,9 +1087,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return SQLds;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1129,9 +1129,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return SQLds;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1160,9 +1160,9 @@ namespace SQLHelper
                 return SQLReader;
 
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
         }
 
@@ -1196,9 +1196,9 @@ namespace SQLHelper
                 SQLReader = SQLCmd.ExecuteReader(CommandBehavior.CloseConnection);
                 return SQLReader;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
         }
 
@@ -1228,9 +1228,9 @@ namespace SQLHelper
                 SQLReader = SQLCmd.ExecuteReader(CommandBehavior.CloseConnection);
                 return SQLReader;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
         }
 
@@ -1279,9 +1279,9 @@ namespace SQLHelper
                     return default(T);
                 }
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1330,9 +1330,9 @@ namespace SQLHelper
                     return default(T);
                 }
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1375,9 +1375,9 @@ namespace SQLHelper
                     return default(T);
                 }
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1408,9 +1408,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return SQLds;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1500,9 +1500,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return mList;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1547,9 +1547,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return mList;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1584,9 +1584,9 @@ namespace SQLHelper
                 SQLConn.Close();
                 return mList;
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1623,9 +1623,9 @@ namespace SQLHelper
                 SQLConn.Open();
                 return (T)SQLCmd.ExecuteScalar();
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1651,9 +1651,9 @@ namespace SQLHelper
                 SQLConn.Open();
                 return (T)SQLCmd.ExecuteScalar();
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             finally
             {
@@ -1692,9 +1692,9 @@ namespace SQLHelper
                     return paramCollection;
                 }
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             return paramCollection;
         }
@@ -1718,9 +1718,9 @@ namespace SQLHelper
                     }
                 }
             }
-            catch (Exception e)
+            catch
             {
-                throw e;
+                throw;
             }
             return paramCollection;
         }

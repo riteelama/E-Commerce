@@ -54,9 +54,9 @@ namespace SQLHelper
                             return default(T);
                         }
                     }
-                    catch (Exception e)
+                    catch 
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -101,9 +101,9 @@ namespace SQLHelper
                             return default(T);
                         }
                     }
-                    catch (Exception e)
+                    catch 
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -138,9 +138,9 @@ namespace SQLHelper
                         object t = await SQLCmd.ExecuteScalarAsync();
                         return (T)t;
                     }
-                    catch (Exception e)
+                    catch 
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -171,9 +171,9 @@ namespace SQLHelper
                         object t = await SQLCmd.ExecuteScalarAsync();
                         return (T)t;
                     }
-                    catch (Exception e)
+                    catch 
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {

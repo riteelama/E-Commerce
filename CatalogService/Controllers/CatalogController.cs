@@ -12,18 +12,18 @@ namespace CatalogService.Controllers
     public class CatalogController : ControllerBase
     {
         // GET: api/<CatalogController>
-        [HttpPost]
-        public IEnumerable<CatalogItem> GetCatalogItemList()
+        [HttpPost("GetCatalogItemListAsync")]
+        public async Task<IEnumerable<CatalogItem>> GetCatalogItemListAsync()
         {
-            CatalogManager catalogManager = new CatalogManager();            
-            return catalogManager.GetCatalogItemList();
+            ICatalogManager catalogManager = CatalogManagerFactory.Create();
+            return await catalogManager.GetCatalogItemListAsyc();
         }
 
-        [HttpPost]
-        public CatalogItem GetCatalogItem(Guid CatalogItemID)
+        [HttpPost("GetCatalogItemAsync")]
+        public Task<CatalogItem> GetCatalogItemAsync(Guid CatalogItemID)
         {
-            CatalogManager catalogManager = new CatalogManager();
-            return catalogManager.GetCatalogItemByID(CatalogItemID);
+            ICatalogManager catalogManager = CatalogManagerFactory.Create();
+            return catalogManager.GetCatalogItemByIDAsync(CatalogItemID);
         }
 
         // GET api/<CatalogController>/5

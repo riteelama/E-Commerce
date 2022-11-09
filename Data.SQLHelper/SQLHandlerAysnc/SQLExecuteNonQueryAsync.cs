@@ -87,9 +87,9 @@ namespace SQLHelper
 
                         return ReturnValue;
                     }
-                    catch (Exception e)
+                    catch 
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -130,9 +130,9 @@ namespace SQLHelper
                         bool ReturnValue = (bool)SQLCmd.Parameters[OutPutParamerterName].Value;
                         return ReturnValue;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -170,9 +170,9 @@ namespace SQLHelper
                     await SQLCmd.ExecuteNonQueryAsync();
                     return (T)SQLCmd.Parameters[OutPutParamerterName].Value;
                 }
-                catch (Exception e)
+                catch
                 {
-                    throw e;
+                    throw;
                 }
                 finally
                 {
@@ -207,9 +207,9 @@ namespace SQLHelper
                     await SQLCmd.ExecuteNonQueryAsync();
                     return (T)SQLCmd.Parameters[OutPutParamerterName].Value; ;
                 }
-                catch (Exception e)
+                catch
                 {
-                    throw e;
+                    throw;
                 }
                 finally
                 {
@@ -239,9 +239,9 @@ namespace SQLHelper
                         effectedRows = await SQLCmd.ExecuteNonQueryAsync();
                         return effectedRows;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -276,9 +276,9 @@ namespace SQLHelper
                         effectedRows = await SQLCmd.ExecuteNonQueryAsync();
                         return effectedRows;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -318,9 +318,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return ReturnValue;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -356,9 +356,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return ReturnValue;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {
@@ -397,9 +397,9 @@ namespace SQLHelper
                         SQLConn.Close();
                         return ReturnValue;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                     finally
                     {

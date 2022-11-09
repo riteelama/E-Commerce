@@ -35,9 +35,9 @@ namespace SQLHelper
 
                         return SQLReader;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                 }
             }
@@ -67,9 +67,9 @@ namespace SQLHelper
                         SQLReader = await SQLCmd.ExecuteReaderAsync(CommandBehavior.CloseConnection);
                         return SQLReader;
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        throw e;
+                        throw;
                     }
                 }
             }
