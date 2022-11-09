@@ -26,8 +26,15 @@ namespace CatalogService.Controllers
             return catalogManager.GetCatalogItemByIDAsync(CatalogItemID);
         }
 
-        // GET api/<CatalogController>/5
-        [HttpGet("{id}")]
+        [HttpPost("CatalogItemAddAsync")]
+        public async Task CatalogItemAddAsync([FromBody] CatalogItem objCatalogItem)
+        {
+            ICatalogManager catalogManager = CatalogManagerFactory.Create();
+            await catalogManager.CatalogItemAddAsync(objCatalogItem);
+        }
+
+            // GET api/<CatalogController>/5
+            [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";

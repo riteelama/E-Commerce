@@ -6,5 +6,7 @@ public interface ICatalogManager
 {
     Task<IEnumerable<CatalogItem>> GetCatalogItemListAsyc();
     Task<CatalogItem> GetCatalogItemByIDAsync(Guid itemID);
+
+    Task CatalogItemAddAsync(CatalogItem objCatalogItem);
 }
 

@@ -1,4 +1,5 @@
 ﻿using CommonEnitity.Catalog;
+using Microsoft.AspNetCore.Http.HttpResults;
 using SQLHelper;
 
 namespace CatalogService.SQLDataProvider;
@@ -32,6 +33,36 @@ public class CatalogDataProvider: ICatalogDataProvider
         try
         {
             return await objSQLH.ExecuteAsObjectAsync<CatalogItem>(spName, sParam);
+        }
+        catch
+        {
+            throw;
+        }
+    }
+
+    public async Task CatalogItemAddAsync(CatalogItem objCatalogItem)
+    {
+        List<SQLParam> sParam = new List<SQLParam>
+        {
+            new SQLParam("@Id", objCatalogItem.Id),
+            new SQLParam("@Id", objCatalogItem.Name),
+            new SQLParam("@Id", objCatalogItem.AvailableStock),
+            new SQLParam("@Id", objCatalogItem.CatalogTypeId),
+            new SQLParam("@Id", objCatalogItem.AvailableStock),
+            new SQLParam("@Id", objCatalogItem.CatalogBrandId),
+            new SQLParam("@Id", objCatalogItem.Description),
+            new SQLParam("@Id", objCatalogItem.MaxStockThreshold),
+            new SQLParam("@Id", objCatalogItem.OnReorder),
+            new SQLParam("@Id", objCatalogItem.PictureFileName),
+            new SQLParam("@Id", objCatalogItem.PictureUri),
+            new SQLParam("@Id", objCatalogItem.Price),
+            new SQLParam("@Id", objCatalogItem.RestockThreshold)           
+        };
+        SQLExecuteNonQueryAsync objSQLH = new SQLExecuteNonQueryAsync();
+        string spName = objSQLH.GetFullSpName("uspCatalogItemAdd");
+        try
+        {
+            await objSQLH.ExecuteNonQueryAsync(spName, sParam);
         }
         catch
         {

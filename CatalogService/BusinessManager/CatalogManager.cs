@@ -3,7 +3,7 @@ using CommonEnitity.Catalog;
 
 namespace CatalogService.BusinessManager;
 
-public class CatalogManager: ICatalogManager
+public class CatalogManager : ICatalogManager
 {
     public async Task<IEnumerable<CatalogItem>> GetCatalogItemListAsyc()
     {
@@ -15,6 +15,12 @@ public class CatalogManager: ICatalogManager
     {
         ICatalogDataProvider objcatalogDataProvider = CatalogFactory.Create();
         return await objcatalogDataProvider.GetCatalogItemByIDAsync(itemID);
+    }
+
+    public async Task CatalogItemAddAsync(CatalogItem objCatalogItem)
+    {
+        ICatalogDataProvider objcatalogDataProvider = CatalogFactory.Create();
+        await objcatalogDataProvider.CatalogItemAddAsync(objCatalogItem);
     }
 }
 

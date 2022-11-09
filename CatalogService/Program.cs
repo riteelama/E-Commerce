@@ -1,3 +1,7 @@
+using Microsoft.Extensions.Configuration;
+using SQLHelper;
+using System.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,8 +11,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
 var app = builder.Build();
 
+var connectionString = app.Configuration.GetConnectionString("SQLConnection");
+SQLHandlerAsync.Connectionconfig =
+    SQLHandler.Connectionconfig =
+    connectionString;
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
