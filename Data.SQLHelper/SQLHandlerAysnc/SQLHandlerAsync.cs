@@ -47,7 +47,7 @@ namespace SQLHelper
 
         public string GetFullSpName(string spName) 
         {
-           return $"{databaseOwner}[{spName}]";
+           return $"{databaseOwner}.[{spName}]";
         }
 
         public string connectionString
